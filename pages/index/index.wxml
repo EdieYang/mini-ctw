@@ -1,13 +1,90 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<nav-bar title-text="草草团"></nav-bar>
+
+<view class="search_bar" style="margin-top:{{marginNav+20}}px" bindtap="search">
+  <image class='search_icon' src="../../images/search_icon.png"></image>
+  <view class='search_title'>搜索 #新手养宠必备</view>
+</view>
+
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color='{{indicatorColor}}' style='margin-top:25rpx;height:375rpx;'>
+  <block wx:for="{{imgUrls}}" wx:key='{{index}}'>
+    <swiper-item bindtap='redirectUrl' data-index='{{index}}'>
+      <image src="{{item}}" class="slide_image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="header">
+  品牌优评
+</view>
+<scroll-view scroll-x class="brand_scroll">
+  <block wx:for="{{imgUrls}}" wx:key='{{index}}'>
+    <image src="{{item}}" class="scroll_img" mode="aspectFill"></image>
+  </block>
+</scroll-view>
+
+<view class="header">
+  值得看看
+</view>
+
+
+<view class='collect-out'>
+  <view style='display:none'>
+    <block wx:for="{{petCols}}" wx:key='{{index}}'>
+      <image wx:key="petCols" src="{{item.image}}" data-imgsrc='{{item}}' bindload="onImageLoad" mode="widthFix" class="collecting-img shadow-bottom" lazy-load="true"></image>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+</view>
+<view class='space-between'>
+  <view class="collect-out" style='float:left' wx:if="{{col1.length}}">
+    <block wx:for="{{col1}}" wx:key="{{index}}" wx:for-index="idx" wx:for-item="item">
+      <view class="img_box">
+        <view class='item-content'>
+          <image src="{{item.image}}" mode="widthFix" class='img_box_img'></image>
+          <view class="item_desc">
+            <view class='item-info'>
+              <view class='item-header'>
+                <view class='item-title'>{{item.title}}</view>
+              </view>
+              <view class="item-body">
+              <view class="item-from">
+                <image class='item-portrait' src="{{item.portrait}}"></image>
+                <view class="item-name">{{item.nickName}}</view>
+              </view>
+              <view class="item-collect">
+                <view class="item-count">123</view>
+              </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
   </view>
+  <view class="collect-out" style='float:left' wx:if="{{col2.length}}">
+    <block wx:for="{{col2}}" wx:key="" wx:for-index="idx" wx:for-item="item">
+      <view class="img_box">
+        <view class='item-content'>
+          <image src="{{item.image}}" mode="widthFix" class='img_box_img'></image>
+          <view class="item_desc">
+            <view class='item-info'>
+              <view class='item-header'>
+                <view class='item-title'>{{item.title}}</view>
+              </view>
+              <view class="item-body">
+              <view class="item-from">
+                <image class='item-portrait' src="{{item.portrait}}"></image>
+                <view class="item-name">{{item.nickName}}</view>
+              </view>
+              <view class="item-collect">
+                <view class="item-count">123</view>
+              </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view style='clear:both'></view>
 </view>

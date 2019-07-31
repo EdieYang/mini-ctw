@@ -1,21 +1,200 @@
-/**index.wxss**/
-.userinfo {
+.search_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 32rpx;
+  width: 686rpx;
+  height: 72rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 0rpx 10rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius: 36rpx;
+}
+
+.search_icon {
+  margin-left: 34rpx;
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.search_title {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(178, 178, 178, 1);
+  line-height: 40rpx;
+  margin-left: 20rpx;
+  letter-spacing: 1.2rpx;
+}
+
+.slide_image {
+  width: 100%;
+  height: 375rpx;
+}
+
+.header {
+  position: relative;
+  width: 133rpx;
+  height: 30rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  line-height: 42rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 13rpx solid #fee867;
+}
+
+.brand_scroll {
+  width: 100%;
+  height: 227rpx;
+  padding: 20rpx 5rpx;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.scroll_img {
+  width: 272rpx;
+  height: 187rpx;
+  box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(139, 139, 139, 0.27);
+  border-radius: 6rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  display: inline-block;
+}
+
+/* 瀑布流区域 */
+
+.img_box {
+  text-align: center;
+  animation: fadeShow 0.3s;
+  margin-bottom: 40rpx;
+}
+
+.img_box_img {
+  width: 335rpx;
+}
+
+.item_desc {
+  width: 94%;
+}
+
+.item-content {
+  width: 335rpx;
+  margin-left: 30rpx;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: none;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px 0px rgba(174, 183, 186, 0.5);
+  border-radius: 2px;
+}
+
+.item-content-right{
+  width: 335rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: none;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px 0px rgba(174, 183, 186, 0.5);
+  border-radius: 2px;
+}
+
+.item-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 0;
+}
+
+.item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.item-title {
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.item-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.item-from {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-portrait {
+  width: 42rpx;
+  height: 42rpx;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.item-name {
+  height: 28rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 28rpx;
+  margin-left: 15rpx;
+}
+
+.item-collect {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-count {
+  height: 28rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(145, 145, 145, 1);
+  line-height: 28rpx;
+}
+
+.collecting-img {
+  width: 100%;
+  position: relative;
+}
+
+.collect-out {
+  width: 50%;
+  margin-top: 20rpx;
+  column-width: 330rpx;
+  column-gap: 20rpx;
+}
+
+.collect-out:after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
 }

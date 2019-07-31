@@ -1,0 +1,15 @@
+<nav-bar title-text="搜索"></nav-bar>
+<view class='search_cover' style="margin-top:{{marginNav+20}}px">
+  <input class="search_bar" name='search' placeholder="搜索#新手养宠必备、必备、商品名称" placeholder-class="search_holder"></input>
+  <image class='search_icon' src="../../images/search_icon.png"></image>
+  <view class="search_cancel">取消</view>
+</view>
+<view class="keyword_cover">
+  <text class="key_hot">Hot</text>
+  <text class="key_header">热门搜索</text>
+</view>
+<view class="keyword_list">
+  <block wx:for="{{keywordList}}">
+    <view class="keyword">{{item}}</view>
+  </block>
+</view>

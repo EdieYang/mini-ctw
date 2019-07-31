@@ -1,0 +1,14 @@
+<cover-view class='nav' style='height: {{status + navHeight}}px;top:0px;position:fixed;width:100%;z-index:1000'>
+    <cover-view class='status' style='height: {{status}}px;{{containerStyle}}'></cover-view>
+    <cover-view class='navbar' style='height:{{navHeight}}px;{{containerStyle}}'>
+        <cover-view class='back-icon' wx:if="{{backIcon}}" bindtap='back'>
+            <cover-image src='{{backIcon}}'></cover-image>
+        </cover-view>
+        <cover-view class='home-icon' wx:if="{{homeIcon}}" bindtap='home'>
+            <cover-image src='../../images/rehome.png'></cover-image>
+        </cover-view>
+        <cover-view class='nav-title' wx:if="{{titleText}}">
+            <cover-view style='{{textStyle}}'>{{titleText}}</cover-view>
+        </cover-view>
+    </cover-view>
+</cover-view>

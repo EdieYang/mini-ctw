@@ -1,13 +1,21 @@
-//index.js
-//获取应用实例
 const app = getApp()
+let col1H = 0
+let col2H = 0
+var loadingCount = 10
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    marginNav: app.globalData.marginNav,
+    imgUrls: [],
+    indicatorDots: true,
+    indicatorColor: '#ffffff',
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    imgUrls: ['https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564553406227&di=aef3203a44344df0fd624808360451cd&imgtype=0&src=http%3A%2F%2Fimg9.ph.126.net%2FNWkvi7eyWPOew5xsz3arrw%3D%3D%2F1550927121692707769.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564553406226&di=e1f8430652c723f2eb1f67d382208030&imgtype=0&src=http%3A%2F%2Fimg2.ph.126.net%2FtmxIZ3zTplM_f4v_NNtfkg%3D%3D%2F4848687948917904710.jpg','https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564555255735&di=19c81dbac110c85e450c19e4edba2c67&imgtype=0&src=http%3A%2F%2Fwww.himitukiti.jp%2Fhot%2Fftp-box%2Fimg20150907234729.jpg'],
+    petCols: [{ 'image': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564553406227&di=aef3203a44344df0fd624808360451cd&imgtype=0&src=http%3A%2F%2Fimg9.ph.126.net%2FNWkvi7eyWPOew5xsz3arrw%3D%3D%2F1550927121692707769.jpg', 'title': '好用的猫砂系列测评', 'portrait': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564553406227&di=aef3203a44344df0fd624808360451cd&imgtype=0&src=http%3A%2F%2Fimg9.ph.126.net%2FNWkvi7eyWPOew5xsz3arrw%3D%3D%2F1550927121692707769.jpg', 'nickName': '印度阿三', 'favourite': 232 }, { 'image': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564553406226&di=e1f8430652c723f2eb1f67d382208030&imgtype=0&src=http%3A%2F%2Fimg2.ph.126.net%2FtmxIZ3zTplM_f4v_NNtfkg%3D%3D%2F4848687948917904710.jpg', 'title': '好用的狗零食系列测评', 'portrait': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564555255735&di=19c81dbac110c85e450c19e4edba2c67&imgtype=0&src=http%3A%2F%2Fwww.himitukiti.jp%2Fhot%2Fftp-box%2Fimg20150907234729.jpg', 'nickName': '印度阿四', 'favourite': 1232 }],
+    col1: [],
+    col2: [],
   },
   //事件处理函数
   bindViewTap: function() {
@@ -43,12 +51,37 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  onImageLoad: function (e) {
+    let oImgW = e.detail.width; //图片原始宽度
+    let oImgH = e.detail.height; //图片原始高度
+    let imgWidth = 155.5; //图片设置的宽度
+    let scale = imgWidth / oImgW; //比例计算
+    let imgHeight = oImgH * scale; //自适应高度
+    let imgInfo = e.currentTarget.dataset.imgsrc
+    loadingCount = loadingCount - 1;
+
+    let col1 = this.data.col1;
+    let col2 = this.data.col2;
+    if (col1H <= col2H) {
+      col1H += imgHeight;
+      col1.push(imgInfo);
+    } else {
+      col2H += imgHeight;
+      col2.push(imgInfo);
+    }
+    let data = {
+      col1: col1,
+      col2: col2
+    };
+    if (loadingCount == 0) {
+      data.petCols = [];
+    }
+   
+    this.setData(data);
+  },
+  search:function(){
+    wx.navigateTo({
+      url: '../search/search',
     })
   }
 })
