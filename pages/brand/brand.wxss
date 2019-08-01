@@ -1,0 +1,173 @@
+.brand_header {
+  width: 690rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.brand_img {
+  width: 272rpx;
+  height: 187rpx;
+  box-shadow: 0px 4px 8px 0px rgba(139, 139, 139, 0.27);
+  border-radius: 6rpx;
+}
+
+.brand_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 358rpx;
+  height: 187rpx;
+  padding-left: 30rpx;
+}
+
+.brand_item {
+  height: 33rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 33rpx;
+  margin-bottom: 17rpx;
+}
+
+.brand_tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+}
+
+.brand_tag_item {
+  height: 36rpx;
+  border-radius: 100rpx;
+  border: 1px solid rgba(194, 194, 194, 1);
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  margin-right: 10rpx;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+}
+
+/* swipper 样式 */
+
+.h_c {
+  height: 576rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 369rpx;
+  height: 480rpx;
+}
+
+.h_sp {
+  display: flex;
+  flex-direction: column;
+  width: 369rpx;
+  height: 480rpx;
+  border: 1rpx solid rgba(231, 231, 231, 1);
+  margin-top: 38rpx;
+}
+
+.active {
+  width: 412rpx;
+  height: 536rpx;
+  transition: all 0.2s ease-in 0s;
+  box-shadow: 0px 0px 10px 0px rgba(174, 183, 186, 0.5);
+  margin-top: 10rpx;
+}
+
+.pos_c {
+  width: 369rpx;
+  height: 330rpx;
+  opacity: 0.7;
+}
+
+.pos_c_active {
+  width: 412rpx;
+  height: 369rpx;
+  opacity: 1;
+  transition: all 0.2s ease-in 0s;
+}
+
+.commodity_info {
+  display: flex;
+  flex-direction: column;
+  width: 329rpx;
+  height: 150rpx;
+  margin-left: 20rpx;
+}
+
+.commodity_info_active {
+  display: flex;
+  flex-direction: column;
+  width: 374rpx;
+  height: 167rpx;
+  margin-left: 20rpx;
+  transition: all 0.2s ease-in 0s;
+}
+
+.commodity_label {
+  height: 28rpx;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 28rpx;
+  margin-top: 15rpx;
+}
+
+.commodity_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14rpx;
+  width: 100%;
+}
+
+.commodity_footer_active {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24rpx;
+}
+
+.commodity_price {
+  height: 28rpx;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(232, 17, 97, 1);
+  line-height: 28rpx;
+}
+
+.commodity_coupon_btn {
+  width: 160rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  background: rgba(254, 232, 103, 1);
+  border-radius: 28rpx;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  margin: 0 0;
+  border: none;
+}
+
+.commodity_coupon_btn::after {
+  border: none;
+  outline: none;
+}

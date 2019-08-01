@@ -1,0 +1,36 @@
+<nav-bar title-text="品牌优评"></nav-bar>
+
+<view class="brand_header" style="margin-top:{{marginNav+10}}px">
+  <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564638999022&di=c51ba95c49ca592f288b0d49d23276b1&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201704%2F30%2F20170430140841_eVKdu.jpeg" class="brand_img"></image>
+  <view class="brand_info">
+    <view class="brand_item">品牌：荒野盛宴</view>
+    <view class="brand_item">产地：美国</view>
+    <view class="brand_item">范围：猫、狗</view>
+    <view class="brand_item">关注人数：19909</view>
+  </view>
+</view>
+
+<view class="brand_tag">
+  <view class="brand_tag_item">TOP4</view>
+  <view class="brand_tag_item">年度最佳猫粮</view>
+  <view class="brand_tag_item">WWO</view>
+</view>
+
+
+<swiper bindchange="swiper" class='h_c' current="0" circular="{{true}}" skip-hidden-item-layout="{{true}}" next-margin="145rpx" previous-margin="145rpx"  easing-function='easeOutCubic' style='margin-top:100rpx'>
+  <block wx:for="{{imgUrls}}" wx:for-index="i" wx:key="{{index}}">
+    <swiper-item class="item"  bindtap='previewImg' data-imgindex='{{i}}'>
+      <view class='h_sp {{i==index?"active":""}}'>
+        <image mode='aspectFill' class='pos_c  {{i==index?"pos_c_active":""}}' src='{{item}}'></image>
+        <view class="commodity_info {{i==index?'commodity_info_active':''}}">
+          <view class="commodity_label">商品名：帝国时代符合符合</view>
+          <view class="commodity_label">规格：帝国时代符合符合</view>
+          <view class="commodity_footer {{i==index?'commodity_footer_active':''}}">
+            <view class="commodity_price">￥30~36</view>
+            <button class="commodity_coupon_btn">抢优惠券</button>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>

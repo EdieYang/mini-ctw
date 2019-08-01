@@ -18,8 +18,8 @@
   品牌优评
 </view>
 <scroll-view scroll-x class="brand_scroll">
-  <block wx:for="{{imgUrls}}" wx:key='{{index}}'>
-    <image src="{{item}}" class="scroll_img" mode="aspectFill"></image>
+  <block wx:for="{{brandImgUrls}}" wx:key='{{index}}'>
+    <image src="{{item}}" class="scroll_img" mode="aspectFit" bindtap="brandDetail"></image>
   </block>
 </scroll-view>
 
@@ -28,18 +28,16 @@
 </view>
 
 
-<view class='collect-out'>
-  <view style='display:none'>
-    <block wx:for="{{petCols}}" wx:key='{{index}}'>
-      <image wx:key="petCols" src="{{item.image}}" data-imgsrc='{{item}}' bindload="onImageLoad" mode="widthFix" class="collecting-img shadow-bottom" lazy-load="true"></image>
-    </block>
-  </view>
+<view style='display:none'>
+  <block wx:for="{{petCols}}" wx:key='{{index}}'>
+    <image wx:key="petCols" src="{{item.image}}" data-imgsrc='{{item}}' bindload="onImageLoad" mode="widthFix" class="collecting-img shadow-bottom" lazy-load="true"></image>
+  </block>
 </view>
 <view class='space-between'>
   <view class="collect-out" style='float:left' wx:if="{{col1.length}}">
     <block wx:for="{{col1}}" wx:key="{{index}}" wx:for-index="idx" wx:for-item="item">
-      <view class="img_box">
-        <view class='item-content'>
+      <view class="img_box_left">
+        <view class='item-content' bindtap="detail">
           <image src="{{item.image}}" mode="widthFix" class='img_box_img'></image>
           <view class="item_desc">
             <view class='item-info'>
@@ -47,13 +45,13 @@
                 <view class='item-title'>{{item.title}}</view>
               </view>
               <view class="item-body">
-              <view class="item-from">
-                <image class='item-portrait' src="{{item.portrait}}"></image>
-                <view class="item-name">{{item.nickName}}</view>
-              </view>
-              <view class="item-collect">
-                <view class="item-count">123</view>
-              </view>
+                <view class="item-from">
+                  <image class='item-portrait' src="{{item.portrait}}"></image>
+                  <view class="item-name">{{item.nickName}}</view>
+                </view>
+                <view class="item-collect">
+                  <view class="item-count">123</view>
+                </view>
               </view>
             </view>
           </view>
@@ -61,10 +59,10 @@
       </view>
     </block>
   </view>
-  <view class="collect-out" style='float:left' wx:if="{{col2.length}}">
+  <view class="collect-out" style='float:right' wx:if="{{col2.length}}">
     <block wx:for="{{col2}}" wx:key="" wx:for-index="idx" wx:for-item="item">
-      <view class="img_box">
-        <view class='item-content'>
+      <view class="img_box_right">
+        <view class='item-content-right'>
           <image src="{{item.image}}" mode="widthFix" class='img_box_img'></image>
           <view class="item_desc">
             <view class='item-info'>
@@ -72,13 +70,13 @@
                 <view class='item-title'>{{item.title}}</view>
               </view>
               <view class="item-body">
-              <view class="item-from">
-                <image class='item-portrait' src="{{item.portrait}}"></image>
-                <view class="item-name">{{item.nickName}}</view>
-              </view>
-              <view class="item-collect">
-                <view class="item-count">123</view>
-              </view>
+                <view class="item-from">
+                  <image class='item-portrait' src="{{item.portrait}}"></image>
+                  <view class="item-name">{{item.nickName}}</view>
+                </view>
+                <view class="item-collect">
+                  <view class="item-count">123</view>
+                </view>
               </view>
             </view>
           </view>

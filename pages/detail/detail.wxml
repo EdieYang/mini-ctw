@@ -1,2 +1,71 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<nav-bar title-text="剁手必买猫砂"></nav-bar>
+
+<view class="title_cover" style="margin-top:{{marginNav}}px">
+  <image class='title_portrait' src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564638999022&di=5c3c61a9cb67488ddfb72bebcfb8248c&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201807%2F10%2F20180710152717_3e35s.jpeg"></image>
+  <view class="title_info">
+    <view class="title_name">我是测评官</view>
+    <view class="title_date">2019-08-20</view>
+  </view>
+</view>
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color='{{indicatorColor}}' style='margin-top:20rpx;height:460rpx;'>
+  <block wx:for="{{imgUrls}}" wx:key='{{index}}'>
+    <swiper-item bindtap='redirectUrl' data-index='{{index}}'>
+      <image src="{{item}}" class="slide_image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="tag_cover">
+  <view class="tag_item">#新手养猫必备</view>
+  <view class="tag_item">#新手养猫必备</view>
+</view>
+
+<text class="content_cover">
+Parties and family gatherings are popular this time of year. Whether you’re celebrating an anniversary, a birthday, graduation, a holiday or the start of your favorite sport’s season, entertaining can be quick, simple, affordable and fun if you plan ahead. 
+• Stock your pantry, refrigerator and freezer with essentials such as precooked, hearty smoked sausage, assorted frozen, refrigerated or boxed side dishes, a variety of vegetables (frozen, fresh or canned), canned or refrigerated soups, and grated cheese for delicious meals in minutes.       
+• Choose recipes you can prepare ahead to spend more time with guests. 
+• Last-minute party? Quick and easy solutions are available to help you have dinner in about 30 minutes, including: 
+  − Prepare your favorite seasoned rice mix, then add sliced smoked sausage. Heat through for dinner in 30 minutes. 
+  − Serve smoked sausage alongside refrigerated mashed potatoes for a quick meal solution. − Add sliced smoked sausage to a quick stuffing mix and pair with frozen vegetables. 
+  − Stir sliced smoked sausage into prepared macaroni and cheese, then heat through for a one-pot meal that’s quick, satisfying, delicious and minimizes cleanup time, too. 
+  − Add sliced smoked sausage to a jar of your favorite pasta sauce and heat through. Serve over any cooked pasta and enjoy. If you plan to serve dinner, choose a recipe that is a one-dish meal such as Sausage Skillet Dinner. Smoked Sausage Skillet Dinner 1 (1-lb.) pkg. Hillshire Farm Polska Kielbasa, sliced 1/4″ thick 1 (28-oz.) bag frozen diced, sliced potatoes 1 (16-oz.) bag frozen mixed vegetables 2 Tbsp. cooking oil 1/4 cup shredded cheddar cheese Place oil in skillet with potatoes and vegetables, cover and cook 6-8 minutes. Add the sliced Hillshire Farm Polksa Kielbasa to the skillet and cover and cook 8-10 minutes. Mix in cheddar cheese and serve. Serving size: 4-6 servings
+</text>
+
+
+<view class="commodity_cover">
+  <view class="commodity_title">测评商品</view>
+  <view class="commodity_item">
+    <image class="commodity_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564638999022&di=0a2ec11f69fa23bd04a2d9efd0b23b5a&imgtype=0&src=http%3A%2F%2Fi1.073img.com%2F160203%2F17598486_164355_1.png"></image>
+    <view class="commodity_info">
+      <view class="commodity_label">商品名称：荒野盛宴</view>
+      <view class="commodity_label">规格：包</view>
+      <view class="commodity_label">品牌：荒野盛宴</view>
+      <view class="commodity_label">原价：
+        <text style="text-decoration:line-through">￥128</text>
+      </view>
+      <view class="commodity_label">券后：
+        <text style="color:red">￥23</text>
+      </view>
+      <button class="coupon_btn">立即抢优惠券</button>
+      <view class="coupon_text">已有193人领取优惠券</view>
+    </view>
+  </view>
+
+  <view class="commodity_item">
+    <image class="commodity_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564638999022&di=c51ba95c49ca592f288b0d49d23276b1&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201704%2F30%2F20170430140841_eVKdu.jpeg"></image>
+    <view class="commodity_info">
+      <view class="commodity_label">商品名称：荒野盛宴</view>
+      <view class="commodity_label">规格：包</view>
+      <view class="commodity_label">品牌：荒野盛宴</view>
+      <view class="commodity_label">原价：
+        <text style="text-decoration:line-through">￥128</text>
+      </view>
+      <view class="commodity_label">券后：
+        <text style="color:red">￥23</text>
+      </view>
+      <button class="coupon_btn">立即抢优惠券</button>
+      <view class="coupon_text">已有193人领取优惠券</view>
+    </view>
+  </view>
+</view>
