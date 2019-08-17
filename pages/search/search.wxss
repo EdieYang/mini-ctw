@@ -90,3 +90,152 @@
   margin-top: 20rpx;
   margin-right: 20rpx;
 }
+
+/* 瀑布流区域 */
+
+.img_box_left {
+  animation: fadeShow 0.3s;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
+}
+
+.img_box_right {
+  animation: fadeShow 0.3s;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end
+}
+
+.img_box_img {
+  width: 335rpx;
+}
+
+.item_desc {
+  width: 94%;
+}
+
+.item-content {
+  width: 335rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: none;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px 0px rgba(174, 183, 186, 0.5);
+  border-radius: 2px;
+}
+ 
+ 
+.item-content-right {
+  width: 335rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: none;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px 0px rgba(174, 183, 186, 0.5);
+  border-radius: 2px;
+}
+
+.item-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 0;
+}
+
+.item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-title {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.item-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18rpx;
+}
+
+.item-from {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-portrait {
+  width: 42rpx;
+  height: 42rpx;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.item-name {
+  height: 28rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 28rpx;
+  margin-left: 15rpx;
+}
+
+.item-collect {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-star{
+  margin-right:8rpx;
+  height: 24rpx;
+  width:24rpx;
+}
+.item-count {
+  height: 24rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(145, 145, 145, 1);
+  line-height: 30rpx;
+}
+
+.collecting-img {
+  width: 100%;
+  position: relative;
+}
+
+.collect-out {
+  width: 50%;
+  margin-top: 20rpx;
+  column-width: 335rpx;
+  column-gap: 20rpx;
+}
+
+.collect-out:after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+}

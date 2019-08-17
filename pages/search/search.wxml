@@ -1,15 +1,75 @@
 <nav-bar title-text="搜索"></nav-bar>
 <view class='search_cover' style="margin-top:{{marginNav+20}}px">
-  <input class="search_bar" name='search' placeholder="搜索#新手养宠必备、必备、商品名称" placeholder-class="search_holder"></input>
+  <input class="search_bar" name='search' placeholder="搜索#新手养宠必备、必备、商品名称" placeholder-class="search_holder" confirm-type="search" bindconfirm="searchList" bindinput="searchData"></input>
   <image class='search_icon' src="../../images/search_icon.png"></image>
-  <view class="search_cancel">取消</view>
+  <view class="search_cancel" bindtap="back">取消</view>
 </view>
-<view class="keyword_cover">
+<view class="keyword_cover" wx:if="{{tagType}}">
   <text class="key_hot">Hot</text>
   <text class="key_header">热门搜索</text>
 </view>
-<view class="keyword_list">
-  <block wx:for="{{keywordList}}">
+<view class="keyword_list" wx:if="{{tagType}}">
+  <block wx:for="{{keywordList}}" wx:key="{{index}}">
     <view class="keyword">{{item}}</view>
   </block>
+</view>
+<view style='display:none'>
+  <block wx:for="{{petCols}}" wx:key='{{index}}'>
+    <image wx:key="petCols" src="{{item.img}}" data-imgsrc='{{item}}' bindload="onImageLoad" mode="widthFix" class="collecting-img shadow-bottom" lazy-load="true"></image>
+  </block>
+</view>
+<view class='space-between'>
+  <view class="collect-out" style='float:left' wx:if="{{col1.length}}">
+    <block wx:for="{{col1}}" wx:key="{{index}}" wx:for-index="idx" wx:for-item="item">
+      <view class="img_box_left">
+        <view class='item-content' bindtap="detail" data-id="{{item.appraisalId}}">
+          <image src="{{item.img}}" mode="widthFix" class='img_box_img'></image>
+          <view class="item_desc">
+            <view class='item-info'>
+              <view class='item-header'>
+                <view class='item-title'>{{item.title}}</view>
+              </view>
+              <view class="item-body">
+                <view class="item-from">
+                  <image class='item-portrait' src="{{item.portrait}}"></image>
+                  <view class="item-name">{{item.creatorName}}</view>
+                </view>
+                <view class="item-collect">
+                  <image class="item-star" src="/images/star.png"></image>
+                  <view class="item-count">{{item.appreciateCount}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="collect-out" style='float:right' wx:if="{{col2.length}}">
+    <block wx:for="{{col2}}" wx:key="" wx:for-index="idx" wx:for-item="item">
+      <view class="img_box_right">
+        <view class='item-content-right' bindtap="detail" data-id="{{item.appraisalId}}">
+          <image src="{{item.img}}" mode="widthFix" class='img_box_img'></image>
+          <view class="item_desc">
+            <view class='item-info'>
+              <view class='item-header'>
+                <view class='item-title'>{{item.title}}</view>
+              </view>
+              <view class="item-body">
+                <view class="item-from">
+                  <image class='item-portrait' src="{{item.portrait}}"></image>
+                  <view class="item-name">{{item.creatorName}}</view>
+                </view>
+                <view class="item-collect">
+                  <image class="item-star" src="/images/star.png"></image>
+                  <view class="item-count">{{item.appreciateCount}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view style='clear:both'></view>
 </view>
