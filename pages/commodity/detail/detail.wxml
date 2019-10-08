@@ -1,0 +1,82 @@
+<nav-bar title-text="{{brandName}}"></nav-bar>
+
+<!-- 商品图片轮播图 -->
+<swiper class="cmd-swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" style="margin-top:{{marginNav}}px">
+  <swiper-item class="cmd-swiper-item">
+    <image src="https://img2.epetbar.com/common/upload/commonfile/2019/09/26/172618_370028.jpg@!water" class="cmd-photo"></image>
+  </swiper-item>
+  <swiper-item class="cmd-swiper-item">
+    <image src="https://img2.epetbar.com/common/upload/commonfile/2019/09/26/172618_370028.jpg@!water" class="cmd-photo"></image>
+  </swiper-item>
+</swiper>
+
+<view class="cmd-title">
+  <view class="cmd-name">有机棉插件式套筒七分袖T恤</view>
+  <view class="cmd-spec">M/浅灰色</view>
+  <view class="cmd-price">￥39
+    <text class="price-underline">89</text>
+  </view>
+</view>
+
+<view class="cmd-tags">
+  <view class="cmd-tag">正品保证</view>
+  <view class="cmd-tag">特价商品</view>
+  <view class="cmd-tag">满100包邮</view>
+</view>
+
+<view class="cmd-activity">
+  <view class="cmd-ac-header">此商品正在促销活动中：
+    <text class="cmd-ac-enter">点击参与</text>
+  </view>
+  <view class="cmd-ac-title">{{commodity.activityName}}</view>
+</view>
+
+
+<view class="cmd-info">
+  <view class="cmd-info-header">-商品描述-</view>
+  <import src="../../../utils/wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+</view>
+
+
+<!-- 
+<view class="cmd-cart">
+  <button class="cart-btn">加入购物袋</button>
+</view> -->
+
+
+<view class="cmd-cart-parallel">
+  <button class="cart-share">
+    <text class="cart-share-t">分享</text>  
+    <text class="cart-profit-t">预计佣金4.23%</text>
+  </button>
+  <button class="cart-btn-dvd">加入购物袋</button>
+</view> 
+<!-- 
+<view class="cart-background"></view>
+
+<view class="cart-card">
+  <image src="../../../images/down-arr.png" class="down-arr"></image>
+  <view class="cart-card-cmd">
+    <image class="cart-cmd-photo" src="https://img2.epetbar.com/common/upload/commonfile/2019/09/26/172618_370028.jpg@!water"></image>
+    <view class="cart-cmd-info">
+      <view class="cart-cmd-brand">百加世 NOW FRESH</view>
+      <view class="cart-cmd-title">无谷幼犬鸡肉粮</view>
+      <view class="cart-cmd-price">￥ 342.23</view>
+      <view class="cmd-amount">
+        <image class="amount-arr" src="../../../images/left-arr.png"></image>
+        <view class="amount-range">1</view>
+        <image class="amount-arr" src="../../../images/right-arr.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="cart-cmd-spec">规格：<text class="cart-cmd-spec-t">2kg</text></view>
+  <view class="cart-box">
+    <button class="cart-buy">
+      立即购买
+    </button>
+    <button class="cart-btn-dvd">确定</button>
+  </view>
+</view> -->

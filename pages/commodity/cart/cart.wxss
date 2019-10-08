@@ -1,0 +1,21 @@
+page {
+  font-family: PingFangSC-Regular, San Francisco;
+  color: #454553;
+  padding-bottom: 120rpx;
+  background-color: #f6f6f6;
+}
+
+
+.cart-item{
+  width:100%;
+  background-color: #fff;
+}
+
+.cart-cmd{
+  width:690rpx;
+  margin-left:30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}

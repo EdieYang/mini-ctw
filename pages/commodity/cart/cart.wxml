@@ -1,0 +1,19 @@
+<nav-bar title-text="购物袋"></nav-bar>
+<view class="cart-item">
+  <view class="cart-cmd">
+    <image class="cart-cmd-photo" src="https://img2.epetbar.com/common/upload/commonfile/2019/09/26/172618_370028.jpg@!water"></image>
+    <view class="cart-cmd-info">
+      <view class="cart-cmd-brand"></view>
+      <view class="cart-cmd-name"></view>
+      <view class="cart-cmd-spec"></view>
+      <view class="cart-cmd-price">
+        <view class="cmd-price"></view>
+        <view class="cmd-amount">
+          <image class="amount-arr" src="../../../images/left-arr.png"></image>
+          <view class="amount-range">1</view>
+          <image class="amount-arr" src="../../../images/right-arr.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

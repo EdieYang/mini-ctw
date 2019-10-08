@@ -1,4 +1,4 @@
-/**app.wxss**/
+@import "/utils/wxParse/wxParse.wxss";
 .container {
   height: 100%;
   display: flex;
